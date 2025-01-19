@@ -52,34 +52,49 @@ This project showcases proficiency in exploratory data analysis, handling imbala
 
 
 
-Project: Credit Card Fraud Detection Using Machine Learning
-Objective:
-Developed a machine learning model to detect fraudulent credit card transactions from highly imbalanced datasets.
-Key Features:
-Dataset: Worked with a publicly available credit card transactions dataset containing 284,807 records and 492 fraud cases.
-Techniques:
-Addressed data imbalance using SMOTE (Synthetic Minority Oversampling Technique) and undersampling.
-Scaled transaction amounts using StandardScaler and removed duplicates for data preprocessing.
-Algorithms Used:
-Trained and evaluated multiple classifiers, including:
+Project Summary credit card fraud detection using a highly imbalanced dataset. Here's a concise overview of the work and the key takeaways that can be highlighted in your resume:
+
+Project Overview
+Objective: Detect fraudulent transactions in a credit card dataset while improving key evaluation metrics like precision, recall, and F1-score.
+Dataset: Credit card transactions containing 284,807 rows and 31 features, including anonymized transaction details (V1 to V28), Amount, and the Class label (0: Normal, 1: Fraudulent).
+Challenges:
+Highly imbalanced data: ~99.8% transactions are normal, while ~0.2% are fraudulent.
+Maintaining high recall and F1-score without compromising precision.
+
+Key Steps and Techniques
+
+Data Preprocessing:
+Normalized the Amount column using StandardScaler.
+Removed the Time column as it was not relevant for modeling.
+Handled duplicate data to reduce redundancy.
+
+Class Imbalance Management:
+Explored undersampling and oversampling techniques:
+Undersampling: Reduced majority class to match the minority class (473 samples each), balancing the dataset.
+Oversampling: Could be applied using methods like SMOTE for better results.
+
+Machine Learning Models:
+Used the following classifiers to compare performance:
 Logistic Regression
 Decision Tree Classifier
 Random Forest Classifier
-Evaluation Metrics:
-Compared models using accuracy, precision, recall, and F1-score to identify the best-performing model.
-Key Contributions:
-Data Preprocessing:
-Handled imbalanced data distribution using oversampling and undersampling.
-Performed feature scaling on transaction amounts and removed irrelevant features like time.
-Model Development:
-Achieved high-performance fraud detection using a Decision Tree Classifier.
-Automated the prediction process with a saved model using Joblib.
-Deployment:
-Implemented real-time fraud detection for individual transactions using pre-trained models.
-Tools & Technologies:
-Python (Pandas, NumPy, Scikit-learn, Imbalanced-learn)
-Joblib for model saving/loading
-Google Colab for development and Google Drive for dataset storage.
-Achievements:
-Successfully balanced the dataset to enhance model performance in detecting minority fraud cases.
-Improved recall to ensure high sensitivity in identifying fraudulent transactions.
+Evaluated models using metrics like:
+Accuracy: Overall correctness of predictions.
+Precision: Fraction of correctly predicted fraud cases among all predicted fraud cases.
+Recall: Ability to detect actual fraudulent transactions.
+F1-Score: Harmonic mean of precision and recall.
+Performance Results (Initial Imbalanced Dataset):
+
+Random Forest Classifier performed best:
+Accuracy: 99.95%
+Precision: 90.7%
+Recall: 74.7%
+F1-Score: 81.9%
+Future Steps:
+
+Implement oversampling techniques like SMOTE to enhance recall and precision.
+Perform hyperparameter tuning for improved performance.
+Key Results and Learnings
+Successfully addressed the data imbalance issue and demonstrated the importance of metrics like precision, recall, and F1-score over accuracy in imbalanced datasets.
+Highlighted the trade-offs between different models and metrics.
+Built an efficient fraud detection pipeline using various preprocessing techniques and machine learning algorithms.
